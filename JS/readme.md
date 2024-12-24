@@ -873,3 +873,36 @@ In Second case :- this keyword will refer to the x because now x is his lexical 
 ![alt text](image-1.png)
 
 - this keyword behaves different in class and constructor but now class and constructor not much in use skipping it for now.
+
+15. call apply bind methods :-
+
+call apply bind methods takes first parameter is the object referece to replaced the this keyword value with passed oject Reference
+
+- call method take first parameter as object referece to update this keyword of called function and next parameters can be anything which we want to pass.
+
+- apply method takes first parameter as object referece to update this keyword of called function and next parameter is list of values.
+
+- bind method take first parameter as object referece to update this keyword of called function and next parameters can be anything which we want to pass and bind
+  method returns a function which we can use later.
+
+```
+
+const student1 = {
+    name : "Rohan",
+}
+
+const printName = function (hometown, state) {
+    console.log(this.name + " " + hometown + " " + state);
+}
+
+printName.call(student1, "Indore", "MP"); // Rohan Indore MP
+
+printName.apply(student1, ["Indore", "MP"]); // Rohan Indore MP
+
+const print = printName.bind(student1, "Indore", "MP");
+
+console.log(print); // [Function: bound printName]
+
+print(); // Rohan Indore MP
+
+```
