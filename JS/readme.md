@@ -734,3 +734,143 @@ is Single threaded language it quickly execute the x once promises is resolved i
 
 In async await as soon as JS engine see the await it suspended the x function from call stack once the promise is resolved it execute the
 next lines from the code.
+
+14. this keyword :-
+
+- If we use this keyword outside of any function then it refers to the global object which is window, it can refer to different global object
+  depends on the runtime enviornment of JS, runtime can be node js or brwoser or any other.
+
+- If we use this keyword inside of function then this keyword here also refer to window object but here window is different from global
+  window object.
+
+- if we use this keyword inside function and try to print in strict mode it will give use undefined and in non-strict mode it refers to the
+  window object. basically this keyword behaves different in strict and non-strict mode.
+
+- In non-strict mode this keyword is replaced from undefine to window object values which is equal to global object values because, it uses
+  the phenomena of (this substitution).
+
+- this keyword value depends on how the function is called.
+  if we call function in stric mode and function is using this keyword than it behaves different in both cases.
+
+```
+
+"use strict";
+
+function x(){
+    console.log(this);
+}
+
+x(); // output Undefined
+
+window.x() // output window object
+
+```
+
+- this keyword inside object method refer to same object in which it is used.
+
+```
+
+const obj = {
+    a : 10,
+    x : function () {
+        console.log(this);
+    }
+}
+
+obj.x(); // {a : 10, x : f}
+
+const obj = {
+    a : 10,
+    x : function () {
+        console.log(this.a);
+    }
+}
+
+obj.x(); // 10
+
+```
+
+So basically this keyword inside object refer to same refrence on which obj is refering in this case.
+
+- this keyword behaves different in call apply bind method
+
+```
+const student1 = {
+    name : "Rohan",
+    printName : function () {
+        console.log(this.name);
+    }
+}
+
+student1.printName();
+
+const student2 = {
+    name : "Sanskar",
+}
+
+student1.printName.call(student2);
+```
+
+here we are overiding the this keyword using call method because Second student don't have the print method for him to print name.
+
+- this keyword behaves different in arrow function because arrow functions don't have the this keyword concept. If we are using this keyword
+  in arrow function than this keyword will refer to the its lexical enviornment context.
+
+```
+
+const obj = {
+    a : "Rohan",
+    x : () => {
+        console.log(this); // window
+    }
+}
+
+obj.x();
+
+const obj2 = {
+    a : "Sanskar",
+    x : function(){
+        console.log(this);
+        const y = () =>{
+            console.log(this); // {a : "Sanskar", x : f}
+        }
+        y();
+    }
+}
+
+obj2.x();
+
+```
+
+In first case :- this keyword will refer to the where obj is present, so obj is present in global space so this keyword will refer to global object refrence.
+
+In Second case :- this keyword will refer to the x because now x is his lexical enviornment context and x is present in obj, so this keyword will refer to the obj object refrence.
+
+- this keyword behaves different in dom, this keyword in dom refer to the refrence of dom element on which this keyword is being used.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <button onclick = "alert(this)">click me</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+// output -- [object HTMLButtonElement]
+
+
+![alt text](image-1.png)
+
+```
+
+- this keyword behaves different in class and constructor but now class and constructor not much in use skipping it for now.
