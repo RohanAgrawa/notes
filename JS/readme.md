@@ -2,7 +2,7 @@
 
 JS is most popular and used language around the world.
 
-1. How JS Code works :-
+# How JS Code works :-
 
 Whenever any JS code starts run whole new Execution context will be created for that JS code.
 
@@ -32,7 +32,7 @@ print(x);
 
 - JS is Single threaded synchronous language it start execution of program line by line at time.
 
-2. Hoisting in JS :-
+# Hoisting in JS :-
 
 - Once the program start running even before it went to any line of code in program it stores all the varibles with undefined and function as it is.
 
@@ -61,7 +61,7 @@ function a() {
 console.log(x); // output is now 2
 ```
 
-3. Clousers :-
+# Clousers :-
 
 when functions is bundled together with its lexical enviornment of its parent functions than its called clousers. if child function is printing the varible which is not present in his scope than it will check parent lexical scope and if its not present thier also it again check to its parent of parent lexical and keep follow this process until gets varible that its trying to print.
 
@@ -86,7 +86,7 @@ x(); // output is 2
 
 Clouser help as in data hiding also our varibles are protected from outside of the world it can't be modified out of its scope.
 
-4. Shadowing :-
+# Shadowing :-
 
 Suppose function has varible a in is scope with value 2 and its child function declare same varible with new value than orignal will not going to change its just shadows the orignal one and prints new one in its scope for all type of varible like let, const, var.
 
@@ -161,7 +161,7 @@ function () {
 
 }
 
-5. callbacks :-
+# callbacks :-
 
 callbacks are the functions which we pass as function into another function. callbacks helps us in acheiving the async programing JS.
 
@@ -173,7 +173,7 @@ we passed an arrow function in setTimeout api as callback which will be executed
 
 - Higher order functions are the function which recives function as a parameter like map, reduce, filter or setTimeout.
 
-6. EventLoop and Callback queue and microtask queue :-
+# EventLoop and Callback queue and microtask queue :-
 
 ![alt text](image.png)
 
@@ -217,7 +217,7 @@ console.log("hello");
 
 In above first it prints hello than once milion line execution is finished than setTimeout prints the value of x.
 
-7. Callback Hell :-
+# Callback Hell :-
 
 When we pass one function into another function and parameter function also takes another function as parameter and this chain can be very long sot this is called a call backhell.
 
@@ -233,7 +233,7 @@ function a(function b(
 
 so this is example of callback hell. This is aslo called pyramid of doom because our code is increasing horizontally not vertically.
 
-9. Inversion of control :-
+# Inversion of control :-
 
 ```
 
@@ -247,7 +247,7 @@ without proper information we trusting the Higher oreder function that it will e
 
 In callback hell this might occur, we have to be very carefull while callback.
 
-10. Promises :-
+# Promises :-
 
 The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
@@ -306,7 +306,7 @@ promise.then((order) => {
 
 - Above code is also perfect in case payment is failed but still we want show the order status so we can use catch function.
 
-11. How to create promise :-
+# How to create promise :-
 
 ```
 const promise = new Promise((resolve, reject) => {
@@ -326,7 +326,7 @@ promise.then((res) => {
 
 - reject we call after any validations are failed want to throw the error message to tell the this promise reject and operation is failed.
 
-12. Promise API's :-
+# Promise API's :-
 
 - Promise.all() :- this proise api is very helpful when we made the more than one api call and we want the result after all Promises are settled.
 
@@ -510,7 +510,7 @@ Promise.any([p1, p2, p3]).then((res) => {
 });
 ```
 
-13. async / await :-
+# async / await :-
 
 - To creat a function an async use async keyword before function.
 
@@ -735,7 +735,7 @@ is Single threaded language it quickly execute the x once promises is resolved i
 In async await as soon as JS engine see the await it suspended the x function from call stack once the promise is resolved it execute the
 next lines from the code.
 
-14. this keyword :-
+# this keyword :-
 
 - If we use this keyword outside of any function then it refers to the global object which is window, it can refer to different global object
   depends on the runtime enviornment of JS, runtime can be node js or brwoser or any other.
@@ -874,7 +874,7 @@ In Second case :- this keyword will refer to the x because now x is his lexical 
 
 - this keyword behaves different in class and constructor but now class and constructor not much in use skipping it for now.
 
-15. call apply bind methods :-
+# call apply bind methods :-
 
 call apply bind methods takes first parameter is the object referece to replaced the this keyword value with passed oject Reference
 
