@@ -868,9 +868,8 @@ In Second case :- this keyword will refer to the x because now x is his lexical 
 
 // output -- [object HTMLButtonElement]
 
+```
 
 ![alt text](image-1.png)
-
-```
 
 - this keyword behaves different in class and constructor but now class and constructor not much in use skipping it for now.
