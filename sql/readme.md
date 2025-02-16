@@ -77,3 +77,76 @@
     PhoneNo, Email                              ✅              ❌                  ✅
     FirstName, LastName, PhoneNo, Email         ✅              ❌                  ✅
 
+# Primary key :-
+
+    All candidate keys are Primary key but we only choose one from it. suppose x candidate keys are their than only one we choose from it
+    as Primary other will be called as Alternate key.
+
+    Primary key can be Composite also because Primary key can also be created with more than one column from table which helps for
+    uniqely identifing the touple it is called as Composite Primary Key.
+
+    Primary key must be not null & unique.
+
+    In table only one Primary key can be created.
+
+# Uniqe Key :-
+
+    Unique key is the key which maintain uniqness in the table column.
+
+    uniqe key column can contain multiple null because null != null.
+
+    Table can contain multiple uniqe keys.
+
+```
+CREATE DATABASE scaler_db;
+
+USE scaler_db;
+
+CREATE TABLE STUDENTS -- FIRST WAY TO CREATE PRIMARY KEY
+(
+	ID INT PRIMARY KEY,
+	NAME VARCHAR(100),
+	EMAIL NVARCHAR(500) UNIQUE,
+	PHONE_NO NVARCHAR(500) UNIQUE -- MULTIPLE UNIQUE KEYS
+);
+
+DROP TABLE IF EXISTS STUDENTS;
+
+CREATE TABLE STUDENTS -- SECOND WAY TO CREATE PRIMARY KEY
+(
+	ID INT,
+	NAME VARCHAR(100),
+	EMAIL NVARCHAR(500),
+	PHONE_NO NVARCHAR(500),
+	PRIMARY KEY(ID), -- WE CAN PASS MULTIPLE PARAMETER HERE TO CREATE COMPOSITE PRIMARY KEY
+	UNIQUE(EMAIL), -- WE CAN PASS MULTIPLE PARAMETER HERE TO CREATE COMPOSITE UNIQUE KEY
+	UNIQUE (PHONE_NO)
+
+);
+
+DROP TABLE IF EXISTS STUDENTS;
+
+CREATE TABLE STUDENTS -- THIRD WAY TO CREATE PRIMARY KEY
+(
+	ID INT NOT NULL, -- PRIMARY KEY CONSTRAINT IN SQL SERVER CAN ONLY BE CREATED ON NON-NULLABLE COLUMN
+	NAME VARCHAR(100),
+	EMAIL NVARCHAR(500),
+	PHONE_NO NVARCHAR(500)
+);
+
+ALTER TABLE STUDENTS
+	ADD CONSTRAINT pk_ID PRIMARY KEY(ID); -- ADDING PRIMARY KEY FOR A TABLE USING CONSTRAINT
+										  -- & WE CAN PASS MULTIPLE PARAMETER HERE TO CREATE COMPOSITE PRIMARY KEY
+
+ALTER TABLE STUDENTS
+	ADD CONSTRAINT uk_EMAIL UNIQUE(EMAIL); -- ADDING UNIQUE KEY FOR A TABLE USING CONSTRAINT
+										  -- & WE CAN PASS MULTIPLE PARAMETER HERE TO CREATE COMPOSITE UNIQUE KEY
+
+ALTER TABLE STUDENTS
+	DROP CONSTRAINT pk_ID; -- DELETE PRIMARY CONSTRAINT ON COLUMN
+
+ALTER TABLE STUDENTS
+	DROP CONSTRAINT uk_EMAIL; -- DELETE UNIQUE CONSTRAINT ON COLUMN
+
+DROP TABLE IF EXISTS STUDENTS;
+```
