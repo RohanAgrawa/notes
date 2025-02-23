@@ -159,6 +159,7 @@ DROP TABLE IF EXISTS STUDENTS;
     2. Foreign key can refernce to other table coulmn if that column either be a Primary key or Unique key.
     3. Foreign key contain null values.
     4. Multiple foreign keys allowed in table.
+    5. we can create composite foreign key also in the table.
 
 ```
 use Students
