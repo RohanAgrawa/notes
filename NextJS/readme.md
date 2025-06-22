@@ -17,4 +17,15 @@ Basically Next JS is we can do both.
 ![image](https://github.com/user-attachments/assets/32651784-b3d4-440a-a7e5-59f03fada03c)
 ![image](https://github.com/user-attachments/assets/8596e673-5fe3-4754-8ea9-c219901268cb)
 
+4. layout.js :-
+     layout.js is file is wrapper for the childerens means the components or pages.js are being rendered inside it.
+        Childeren property is the current childeren that is executed or present inide the layout.js
+   In a project at least one layout.js is mandatory but we can different layout.js in different folders depending on the situation, layout.js is by default a reserverd name in next.js just like page.js
+
+     To add a meta data about the page we use meta data object that is also reserverd name in layout.js that gives information about page similar like <head> we use in normal HTML.
+
+   ![image](https://github.com/user-attachments/assets/fb78fa51-a294-470b-87db-4354a359a1e2)
+     ![image](https://github.com/user-attachments/assets/d216684d-984d-447c-aef0-65c85ade15ed)
+
+
 
