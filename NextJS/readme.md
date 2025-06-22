@@ -27,5 +27,13 @@ Basically Next JS is we can do both.
    ![image](https://github.com/user-attachments/assets/fb78fa51-a294-470b-87db-4354a359a1e2)
      ![image](https://github.com/user-attachments/assets/d216684d-984d-447c-aef0-65c85ade15ed)
 
+not-found.js => Fallback page for "Not Found" errors (thrown by sibling or nested pages or layouts)
+
+error.js => Fallback page for other errors (thrown by sibling pages or nested pages or layouts)
+
+loading.js => Fallback page which is shown whilst sibling or nested pages (or layouts) are fetching data
+
+route.js => Allows you to create an API route (i.e., a page which does NOT return JSX code but instead data, e.g., in the JSON format)
+
 
 
