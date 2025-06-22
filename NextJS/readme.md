@@ -35,5 +35,13 @@ loading.js => Fallback page which is shown whilst sibling or nested pages (or la
 
 route.js => Allows you to create an API route (i.e., a page which does NOT return JSX code but instead data, e.g., in the JSON format)
 
+5. global.css & icon.png :-
+        global.css is another reserverd file name wich contains a css that can be used globally in application and its imported in layout.js because its wrapper for the childerens.
+
+   icon.png is also reserver file name and if we use this name next js will treat this as fav icon and you can see the fav icon on your browser tab.
+
+![image](https://github.com/user-attachments/assets/c9b69705-6af9-439e-a96f-9b1ecad5f100)
+![image](https://github.com/user-attachments/assets/55466ca2-c7c1-4370-83b4-5109f473b080)
+
 
 
