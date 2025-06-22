@@ -4,4 +4,5 @@ We can implement react component similar in next js, but this is not a normal re
 
 It store logs on server instead of browser console.
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/ef7e0bc5-3b28-4242-9c60-76ce0a0118bb)
+
