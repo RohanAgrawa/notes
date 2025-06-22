@@ -22,7 +22,7 @@ Basically Next JS is we can do both.
         Childeren property is the current childeren that is executed or present inide the layout.js
    In a project at least one layout.js is mandatory but we can different layout.js in different folders depending on the situation, layout.js is by default a reserverd name in next.js just like page.js
 
-     To add a meta data about the page we use meta data object that is also reserverd name in layout.js that gives information about page similar like <head> we use in normal HTML.
+     To add a meta data about the page we use meta data object that is also reserverd name in layout.js that gives information about page similar like <head> we use in normal HTML <head> tag.
 
    ![image](https://github.com/user-attachments/assets/fb78fa51-a294-470b-87db-4354a359a1e2)
      ![image](https://github.com/user-attachments/assets/d216684d-984d-447c-aef0-65c85ade15ed)
