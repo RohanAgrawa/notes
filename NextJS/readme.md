@@ -66,5 +66,18 @@ while importing we can use @ also to refer to the root level directly instead of
 
 ![image](https://github.com/user-attachments/assets/b083ca14-6a1e-40d7-9b4d-df4865d4a496)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Dynamic Routes :-
+
+     Dynamic Routes is very important concepte for UI, suppose we to routes to a different page but the content is dynamic dependes on data from backend or other source. To create a dynamic routes we will create a folder with [] square brackets and inside that brackets just add any name as place holder. Inside this special folder we will create page.js that will render the dynamic route page.
+
+To verify the how is it dynamic next js pass a param props to the special folder page.js component which contains the detail of dynamic route.
+
+![image](https://github.com/user-attachments/assets/aec9617c-28b8-4c2c-8ee3-2ebab6c936ae)
+![image](https://github.com/user-attachments/assets/ef8872ca-d216-40f9-bd65-f63478b25c4b)
+![Uploading image.png…]()
+
+
 
 
