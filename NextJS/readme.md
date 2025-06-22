@@ -76,7 +76,7 @@ To verify the how is it dynamic next js pass a param props to the special folder
 
 ![image](https://github.com/user-attachments/assets/aec9617c-28b8-4c2c-8ee3-2ebab6c936ae)
 ![image](https://github.com/user-attachments/assets/ef8872ca-d216-40f9-bd65-f63478b25c4b)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/545b0050-4d7c-407e-b93e-e8ef60204c36)
 
 
 
