@@ -88,6 +88,8 @@ To verify the how is it dynamic next js pass a param props to the special folder
 
 Benifits of execution on server is that fast the overall user experience by executing them in server and render it to browser to avoid by loading all javscript in browser.
 
-
+1. In server component we can inject or use client component as well by not making whole server component as client component.
+2. Suppose only few lines of code is client side used and for that not necessary to make whole server component as client.
+3. Make separate component with custom client logic and inject in server component.
 
 
