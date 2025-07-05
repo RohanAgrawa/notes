@@ -78,6 +78,16 @@ To verify the how is it dynamic next js pass a param props to the special folder
 ![image](https://github.com/user-attachments/assets/ef8872ca-d216-40f9-bd65-f63478b25c4b)
 ![image](https://github.com/user-attachments/assets/545b0050-4d7c-407e-b93e-e8ef60204c36)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Client Component :-
+
+     In Next Js by default react component are server component but in vanila react js application all components are client side means executed in browser itself. But in next js it executed in server and then passed a compiled code to browser for rendering. But if we use some hooks and events that depends on the client usage in this next js won't support because it doesnot make sense to execute on server for that we have to tell specifically to next js that this component is client side component and it contains logic related to the client activity.
+
+   For that at the top of component we have to specifically mention that 'use client' this directive is used to inform next js server that it must be executed in browser itself.
+
+Benifits of execution on server is that fast the overall user experience by executing them in server and render it to browser to avoid by loading all javscript in browser.
+
 
 
 
