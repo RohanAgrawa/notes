@@ -92,4 +92,10 @@ Benifits of execution on server is that fast the overall user experience by exec
 2. Suppose only few lines of code is client side used and for that not necessary to make whole server component as client.
 3. Make separate component with custom client logic and inject in server component.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+9. Async Component:-
+
+    In Vanilla React component can not be async but in component can be async and it make sense as well because it executes in server rather than on browser. In vanilla react we use useEffect hook and fetch api to get the data from api. But here in next js backend and frontend are compaitible with each other and components are executed at server so we directly fetch data and component are async as well to resolve the promise for that api.
+
 
