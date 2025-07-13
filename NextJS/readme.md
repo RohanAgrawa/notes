@@ -98,4 +98,12 @@ Benifits of execution on server is that fast the overall user experience by exec
 
     In Vanilla React component can not be async but in component can be async and it make sense as well because it executes in server rather than on browser. In vanilla react we use useEffect hook and fetch api to get the data from api. But here in next js backend and frontend are compaitible with each other and components are executed at server so we directly fetch data and component are async as well to resolve the promise for that api.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. loading.js and error.js :-
+
+In next js loading.js is a reserverd file to give better UX when some delay in page loading this file contains custom code which enhance UX when delay in page loading. This file can be created next beside the page.js and this file is applicable to sub folders as well in which this file is created.
+
+In next js error.js is also reserver file to show the error or custom error message when something failed to load the the page based on status code or just generic message. This file is also belong to subfolders in which it is created.
+
 
